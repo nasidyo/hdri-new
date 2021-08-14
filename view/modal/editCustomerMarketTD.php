@@ -1,0 +1,82 @@
+<div class="modal fade" id="editCustomerMarket" tabindex="-1" role="dialog" aria-labelledby="editCustomerMarket" style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addCustomer">แก้ไขตลาดและพื้นที่   </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style=" padding: 1.5rem; ">
+                                    <from>
+
+                                       <div class="form-group row">
+											<label for="inputext" class="col-sm-2 col-form-label">ลุ่มน้ำ</label>
+											<div class="col-sm-4">
+												<select class="form-control" name="idRiverBasin"
+													id="idRiverBasin" disabled>
+                                                    <?php echo loadRiverDependentInSS($conn, $_SESSION['RBAll']); ?>
+                                                    </select>
+
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">พื้นที่</label>
+											<div class="col-sm-8">
+												<select class="form-control" name="idArea" id="idArea" disabled>
+                                                
+                                                </select>
+											</div>
+										</div>
+										
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">ช่องทางตลาด</label>
+											<div class="col-sm-8">
+												<select class="form-control" name="idMarket" id="idMarket" style="width: 100%;">
+                                               <?php
+                                                $sql2="select *  from Market_TD";
+                                                echo "<option value=0 >กรุณาเลือก</option>";
+                                                $stmt = sqlsrv_query( $conn, $sql2 );
+
+                                                while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+                                                $id_pre=$row["idMarket"];
+                                                $name_pre=$row["nameMarket"];
+                                                echo "<option value='$id_pre' > $name_pre</option>";
+                                                }
+                                            ?>
+                                                </select>
+											</div>
+										</div>
+										
+										
+										<div class="form-group row">
+											<label class="col-sm-2 col-form-label">รายชื่อผู้รับซื้อ</label>
+											<div class="col-sm-8">
+												<select class="form-control" name="customer_id" id="customer_id" style="width: 100%;" disabled>
+											<?php
+                                                $sql2=" select *  from customer_TD";
+                                            
+                                                $stmt = sqlsrv_query( $conn, $sql2 );
+
+                                                while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+                                                $id_pre=$row["idCustomer"];
+                                                $name_pre=$row["c_name"];
+                                                echo "<option value='$id_pre' > $name_pre</option>";
+                                                }
+                                            ?>
+                                              
+                                                </select>
+											</div>
+										</div>
+
+                                    </from>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                                <button type="button" class="btn btn-primary" id="editCustomerMarketBtn">ตกลง</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>

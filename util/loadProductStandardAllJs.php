@@ -1,0 +1,25 @@
+<?php 
+    require '../connection/database.php';
+    $db = new Database();
+    $conn=  $db->getConnection();
+    $sql2 = "
+      SELECT tyst.idTypeOfStand, tyst.nameTypeOfStand
+      FROM TypeOfStand tyst
+      ";
+    $data="<option value='ALL'>ทั้งหมด</option><option value='0'>ไม่มี</option>";
+    $stmt = sqlsrv_prepare( $conn, $sql2 );
+    if( !$stmt ) {
+        die( print_r( sqlsrv_errors(), true));
+    }
+    if( sqlsrv_execute( $stmt ) === false ) {
+        die( print_r( sqlsrv_errors(), true));
+    }
+    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+      $id_pre=$row["idTypeOfStand"];
+      $name_pre=$row["nameTypeOfStand"];
+      if($id_pre != "0"){
+          $data .= "<option value='$id_pre'> $name_pre</option>";
+      }
+    }
+    echo $data;
+?>

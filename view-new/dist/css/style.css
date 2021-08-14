@@ -1,0 +1,41 @@
+.agris {
+    width: 250px;
+}
+/* .basins {
+    width: 250px;
+} */
+.basins.active{
+    background-color: brown;
+}
+.img-fluid {
+    height: 154px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: calc(2.25rem + 2px)!important;
+    padding-top: 4px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 7px !important;
+  }
+  
+  .select2-search__field {
+    height: 30px;
+    color: black;
+  }
+
+.report.active{
+    background-color: rgb(128, 128, 128);
+}
+
+#loader{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.75) url(../../../images/loader.gif) no-repeat center center;
+  z-index: 10000;
+}

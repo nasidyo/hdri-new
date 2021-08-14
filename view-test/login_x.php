@@ -1,0 +1,57 @@
+<?php session_start() ?>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<header>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ระบบการบริหารจัดการข้อมูลเกษตรกร</title>
+    <meta name="description" content="ระบบการบริหารจัดการข้อมูลเกษตรกร">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="../vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="../vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/hrdi.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</header>
+
+<body>
+	<div class="content mt-3">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6" style="margin-top: 10%;">
+  		<div class="card">
+              <div class="card-header">
+                  <strong class="login-title">Login</strong>
+              </div>
+              <div class="card-body">
+                <!-- Credit Card -->
+                <div id="pay-invoice">
+                    <div class="card-body">
+                        <div class="card-title">
+
+                          <center><img class="logo-lage" src="../img/hrdi-logo-full.png" alt="Logo"></center>&nbsp;
+                        	<h3 class="text-center" style="color:red";>***** อยู่ในระหว่างการปรับปรุงข้อมูล *****</h3>
+                        </div>
+                        <hr>
+                        
+                    </div>
+                </div>
+
+              </div>
+          </div>
+    </div>
+	</div>
+</body>
